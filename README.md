@@ -292,9 +292,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Support
 
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/yourusername/stackscope/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/stackscope/discussions)
-- 📧 **Email**: your.email@example.com
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/kreggscode/stackscope/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/kreggscode/stackscope/discussions)
+- 📧 **Email**: kreggscode@github.com
 
 ## ⚠️ Disclaimer
 
@@ -304,8 +304,8 @@ StackScope is provided "as is" without warranty of any kind. Detection results m
 
 <div align="center">
 
-**Made with ❤️ by [Your Name]**
+**Made with ❤️ by kreggscode**
 
-[Website](https://yourwebsite.com) • [GitHub](https://github.com/yourusername) • [Twitter](https://twitter.com/yourusername)
+[Website](https://kreggscode.github.io/stackscope/) • [GitHub](https://github.com/kreggscode/stackscope) • [Privacy Policy](https://kreggscode.github.io/stackscope/privacy.html)
 
 </div>
