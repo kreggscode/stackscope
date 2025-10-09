@@ -1,0 +1,17 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="#4F46E5"/>
+  
+  <!-- Magnifying Glass Handle -->
+  <rect x="75" y="75" width="8" height="35" rx="4" fill="white" transform="rotate(45 75 75)"/>
+  
+  <!-- Magnifying Glass Circle -->
+  <circle cx="52" cy="52" r="28" fill="none" stroke="white" stroke-width="6"/>
+  
+  <!-- Code Brackets Inside -->
+  <path d="M 42 42 L 36 52 L 42 62" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 62 42 L 68 52 L 62 62" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Center Dot -->
+  <circle cx="52" cy="52" r="3" fill="white"/>
+</svg>

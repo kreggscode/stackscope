@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - StackScope</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #4f46e5;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .last-updated {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #1f2937;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 24px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      color: #374151;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #4b5563;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #4b5563;
+    }
+
+    .highlight {
+      background: #f0fdf4;
+      border-left: 4px solid #10b981;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .warning {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .summary {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .summary h3 {
+      margin-top: 0;
+      color: #1e40af;
+    }
+
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+    }
+
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .checkmark {
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    .crossmark {
+      color: #ef4444;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy - StackScope</h1>
+    <p class="last-updated"><strong>Last Updated:</strong> October 9, 2025</p>
+
+    <div class="summary">
+      <h3>TL;DR (Summary)</h3>
+      <ul>
+        <li><span class="checkmark">✅</span> All detection happens locally in your browser</li>
+        <li><span class="checkmark">✅</span> No data is sent to external servers</li>
+        <li><span class="checkmark">✅</span> No tracking or analytics</li>
+        <li><span class="checkmark">✅</span> No personal information collected</li>
+        <li><span class="checkmark">✅</span> Minimal permissions (activeTab, scripting, storage)</li>
+      </ul>
+    </div>
+
+    <h2>Overview</h2>
+    <p>StackScope ("we", "our", or "the extension") is committed to protecting your privacy. This privacy policy explains how StackScope handles information when you use our Chrome extension.</p>
+
+    <h2>Information Collection and Use</h2>
+
+    <h3>What We Access</h3>
+    <p>StackScope requires minimal permissions to function:</p>
+
+    <ol>
+      <li>
+        <strong>activeTab Permission</strong>
+        <ul>
+          <li><strong>Purpose:</strong> Access the current tab when you click the extension icon</li>
+          <li><strong>Scope:</strong> Only the active tab, only when you trigger detection</li>
+          <li><strong>Data Accessed:</strong> Page HTML, JavaScript globals, meta tags, scripts, cookies (read-only)</li>
+          <li><strong>Usage:</strong> Analyze page content to detect technologies</li>
+          <li><strong>Storage:</strong> Results cached locally in your browser only</li>
+        </ul>
+      </li>
+      <li>
+        <strong>scripting Permission</strong>
+        <ul>
+          <li><strong>Purpose:</strong> Inject detection script into the page</li>
+          <li><strong>Scope:</strong> Only when you click "Detect"</li>
+          <li><strong>Usage:</strong> Run detection algorithms in page context</li>
+        </ul>
+      </li>
+      <li>
+        <strong>storage Permission</strong>
+        <ul>
+          <li><strong>Purpose:</strong> Cache detection results locally</li>
+          <li><strong>Scope:</strong> Chrome local storage (on your device only)</li>
+          <li><strong>Data Stored:</strong> Last detection results, detection history (last 50), user settings</li>
+          <li><strong>Retention:</strong> Until you clear extension data or uninstall</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>What We DON'T Collect</h3>
+    <div class="highlight">
+      <ul>
+        <li><span class="crossmark">❌</span> No personal information (name, email, etc.)</li>
+        <li><span class="crossmark">❌</span> No browsing history</li>
+        <li><span class="crossmark">❌</span> No page content sent to servers</li>
+        <li><span class="crossmark">❌</span> No tracking pixels or analytics</li>
+        <li><span class="crossmark">❌</span> No cookies set by the extension</li>
+        <li><span class="crossmark">❌</span> No user identifiers</li>
+        <li><span class="crossmark">❌</span> No background data collection</li>
+      </ul>
+    </div>
+
+    <h2>Data Processing</h2>
+
+    <h3>Local Processing Only</h3>
+    <p>All technology detection happens <strong>entirely in your browser</strong>:</p>
+    <ol>
+      <li>You click "Detect" on a page</li>
+      <li>Extension injects detector script into that page</li>
+      <li>Script analyzes page content locally</li>
+      <li>Results displayed in popup</li>
+      <li>Results cached in Chrome local storage (on your device)</li>
+    </ol>
+    <p><strong>No data leaves your device.</strong></p>
+
+    <h3>Data Storage</h3>
+    <p>Detection results are stored locally using Chrome's <code>chrome.storage.local</code> API:</p>
+    <ul>
+      <li><strong>Location:</strong> Your device only (not synced to Chrome account)</li>
+      <li><strong>Purpose:</strong> Display cached results without re-scanning</li>
+      <li><strong>Retention:</strong> Until you clear extension data or uninstall</li>
+      <li><strong>Access:</strong> Only StackScope extension can access this data</li>
+    </ul>
+
+    <h3>Data Sharing</h3>
+    <p><strong>We do not share, sell, rent, or trade your data with anyone.</strong></p>
+    <p>There are no third-party services, analytics, or tracking in StackScope.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>StackScope does <strong>not</strong> use any third-party services, including:</p>
+    <ul>
+      <li>No analytics (Google Analytics, etc.)</li>
+      <li>No error tracking (Sentry, etc.)</li>
+      <li>No CDNs for extension code</li>
+      <li>No external APIs</li>
+      <li>No advertising networks</li>
+    </ul>
+    <p>The extension is completely self-contained.</p>
+
+    <h2>Your Rights</h2>
+
+    <h3>Data Access</h3>
+    <p>You can view all stored data:</p>
+    <ol>
+      <li>Right-click extension icon → "Inspect popup"</li>
+      <li>Console: <code>chrome.storage.local.get(null, console.log)</code></li>
+    </ol>
+
+    <h3>Data Deletion</h3>
+    <p>You can delete all stored data:</p>
+    <ul>
+      <li><strong>Option 1:</strong> Right-click extension icon → "Remove from Chrome"</li>
+      <li><strong>Option 2:</strong> Chrome Settings → Extensions → StackScope → "Remove"</li>
+      <li><strong>Option 3:</strong> Chrome Settings → Privacy → Clear browsing data</li>
+    </ul>
+
+    <h3>Data Portability</h3>
+    <p>Export your detection results:</p>
+    <ul>
+      <li>Click "JSON" or "CSV" in the extension popup</li>
+      <li>Data is yours to keep and use</li>
+    </ul>
+
+    <h2>Compliance</h2>
+
+    <h3>GDPR (EU General Data Protection Regulation)</h3>
+    <p>StackScope complies with GDPR principles. Your rights:</p>
+    <ul>
+      <li>Right to access: View stored data</li>
+      <li>Right to erasure: Delete data</li>
+      <li>Right to portability: Export data</li>
+      <li>Right to object: Uninstall extension</li>
+    </ul>
+
+    <h3>CCPA (California Consumer Privacy Act)</h3>
+    <p>StackScope complies with CCPA:</p>
+    <ul>
+      <li>No sale of data</li>
+      <li>No sharing of personal information</li>
+      <li>Transparent practices</li>
+      <li>Consumer rights respected</li>
+    </ul>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Changes will be posted with an updated "Last Updated" date. Continued use after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this privacy policy:</p>
+    <ul>
+      <li><strong>GitHub:</strong> <a href="https://github.com/yourusername/stackscope/issues">github.com/yourusername/stackscope/issues</a></li>
+      <li><strong>Email:</strong> your.email@example.com</li>
+      <li><strong>Website:</strong> <a href="https://yourwebsite.com">yourwebsite.com</a></li>
+    </ul>
+
+    <h2>Open Source</h2>
+    <p>StackScope is open source. You can review the code to verify our privacy claims:</p>
+    <ul>
+      <li><strong>Repository:</strong> <a href="https://github.com/yourusername/stackscope">github.com/yourusername/stackscope</a></li>
+      <li><strong>License:</strong> MIT</li>
+    </ul>
+
+    <h2>Consent</h2>
+    <p>By installing and using StackScope, you consent to this privacy policy.</p>
+
+    <div class="footer">
+      <p><strong>StackScope</strong> - Privacy-focused web technology detection</p>
+      <p>All detection happens locally. No tracking. No data collection.</p>
+    </div>
+  </div>
+</body>
+</html>

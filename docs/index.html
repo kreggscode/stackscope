@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackScope - Detect 2,390+ Web Technologies</title>
+    <meta name="description" content="The most comprehensive browser extension for detecting web technologies. Identify 2,390+ frameworks, libraries, databases, and more instantly.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--gray);
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: var(--light);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Technologies Section */
+        .technologies {
+            padding: 100px 20px;
+            background: var(--light);
+        }
+
+        .tech-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .tech-category {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .tech-category h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .tech-category ul {
+            list-style: none;
+        }
+
+        .tech-category li {
+            padding: 8px 0;
+            color: var(--gray);
+            border-bottom: 1px solid var(--light);
+        }
+
+        .tech-category li:last-child {
+            border-bottom: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 20px;
+            background: var(--dark);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🚀 Now with 2,390+ Technologies!</div>
+            <h1>StackScope</h1>
+            <p class="subtitle">The Ultimate Technology Detector for Developers</p>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Instantly identify frameworks, libraries, databases, analytics, AI/ML tools, blockchain platforms, and more on any website.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://chrome.google.com/webstore" class="btn btn-primary">
+                    <span>📦</span>
+                    Add to Chrome
+                </a>
+                <a href="https://github.com/kreggscode/stackscope" class="btn btn-secondary">
+                    <span>⭐</span>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h2>2,390+</h2>
+                    <p>Technologies</p>
+                </div>
+                <div class="stat-item">
+                    <h2>100+</h2>
+                    <p>Categories</p>
+                </div>
+                <div class="stat-item">
+                    <h2>100%</h2>
+                    <p>Free & Open Source</p>
+                </div>
+                <div class="stat-item">
+                    <h2>⚡</h2>
+                    <p>Instant Detection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose StackScope?</h2>
+            <p class="section-subtitle">The most comprehensive technology detection tool available</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Comprehensive Coverage</h3>
+                    <p>Detect 2,390+ technologies across 100+ categories. From React to Rust, MongoDB to Machine Learning - we've got you covered.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Instant analysis with real-time results. No waiting, no loading - just click and see what powers any website.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful Interface</h3>
+                    <p>Modern, intuitive UI with smooth animations. Export results as JSON or CSV for further analysis.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>All analysis happens locally in your browser. No data collection, no tracking, no external requests.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>100% Free</h3>
+                    <p>Completely free and open source. No premium features, no paywalls, no subscriptions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Always Updated</h3>
+                    <p>Regular updates with new technologies. Stay current with the latest frameworks and tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies">
+        <div class="container">
+            <h2 class="section-title">What We Detect</h2>
+            <p class="section-subtitle">Comprehensive coverage across the entire tech stack</p>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>🎨 Frontend</h3>
+                    <ul>
+                        <li>React, Vue, Angular, Svelte</li>
+                        <li>Next.js, Nuxt, Remix, Astro</li>
+                        <li>Tailwind, Bootstrap, Material-UI</li>
+                        <li>Redux, MobX, Zustand</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>⚙️ Backend</h3>
+                    <ul>
+                        <li>Node.js, Django, Laravel</li>
+                        <li>Express, FastAPI, Rails</li>
+                        <li>Spring Boot, ASP.NET</li>
+                        <li>150+ API frameworks</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>🗄️ Databases</h3>
+                    <ul>
+                        <li>PostgreSQL, MySQL, MongoDB</li>
+                        <li>Redis, Elasticsearch</li>
+                        <li>Neo4j, Pinecone, Supabase</li>
+                        <li>45+ database systems</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>🤖 AI & ML</h3>
+                    <ul>
+                        <li>OpenAI, Anthropic, Cohere</li>
+                        <li>TensorFlow, PyTorch</li>
+                        <li>Hugging Face, Replicate</li>
+                        <li>30+ AI platforms</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>⛓️ Blockchain</h3>
+                    <ul>
+                        <li>Ethereum, Polygon, Solana</li>
+                        <li>MetaMask, WalletConnect</li>
+                        <li>Web3.js, Ethers.js</li>
+                        <li>35+ Web3 platforms</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>📊 Analytics</h3>
+                    <ul>
+                        <li>Google Analytics, Mixpanel</li>
+                        <li>Segment, PostHog</li>
+                        <li>Optimizely, VWO</li>
+                        <li>25+ analytics tools</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>🛒 E-commerce</h3>
+                    <ul>
+                        <li>Shopify, WooCommerce</li>
+                        <li>Stripe, PayPal, Klarna</li>
+                        <li>Magento, BigCommerce</li>
+                        <li>Payment & platforms</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>🧪 Testing</h3>
+                    <ul>
+                        <li>Jest, Cypress, Playwright</li>
+                        <li>Selenium, Vitest</li>
+                        <li>Storybook, Chromatic</li>
+                        <li>19+ testing tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Discover the Tech Stack?</h2>
+            <p>Join thousands of developers using StackScope to analyze websites</p>
+            <div class="cta-buttons">
+                <a href="https://chrome.google.com/webstore" class="btn btn-primary">
+                    <span>📦</span>
+                    Install Now - It's Free!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Made with 💜 by <a href="https://github.com/kreggscode">kreggscode</a></p>
+            <p style="margin-top: 10px; opacity: 0.7;">
+                <a href="https://github.com/kreggscode/stackscope">GitHub</a> • 
+                <a href="https://github.com/kreggscode/stackscope/issues">Report Issue</a> • 
+                <a href="https://github.com/kreggscode/stackscope/blob/main/LICENSE">MIT License</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+========================================
+  PUSH TO GITHUB - SIMPLE INSTRUCTIONS
+========================================
+
+OPTION 1: Double-click the batch file
+--------------------------------------
+1. Double-click: push-to-github.bat
+2. Wait for it to complete
+3. Done!
+
+
+OPTION 2: Manual commands (if batch file doesn't work)
+-------------------------------------------------------
+Open PowerShell or Command Prompt in this folder and run:
+
+git init
+git add .
+git commit -m "Initial commit: StackScope - 2,390+ Technology Detector"
+git branch -M main
+git remote add origin https://github.com/kreggscode/stackscope.git
+git push -u origin main
+
+
+AFTER PUSHING - Enable GitHub Pages
+------------------------------------
+1. Go to: https://github.com/kreggscode/stackscope
+2. Click "Settings" (top menu)
+3. Click "Pages" (left sidebar)
+4. Under "Source":
+   - Branch: main
+   - Folder: /docs
+5. Click "Save"
+6. Wait 1-2 minutes
+7. Your website will be live at:
+   https://kreggscode.github.io/stackscope/
+
+
+WHAT'S INCLUDED
+---------------
+✅ Extension files (popup, background, detector, etc.)
+✅ 2,390+ technology fingerprints
+✅ Beautiful README with badges
+✅ Stunning website in /docs folder
+✅ MIT License
+✅ .gitignore file
+
+
+TROUBLESHOOTING
+---------------
+If you get "remote already exists" error:
+  git remote remove origin
+  git remote add origin https://github.com/kreggscode/stackscope.git
+  git push -u origin main
+
+If you need authentication:
+  - Use GitHub Desktop app, OR
+  - Set up Personal Access Token
+
+
+YOUR REPOSITORY
+---------------
+URL: https://github.com/kreggscode/stackscope
+Website: https://kreggscode.github.io/stackscope/ (after enabling Pages)
+
+
+READY TO GO! 🚀

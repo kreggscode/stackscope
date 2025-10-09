@@ -1,0 +1,66 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Node.js (if you add build tools later)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build Output (if you add build process)
+dist/
+build/
+*.zip
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Chrome Extension Development
+*.pem
+*.crx
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Test Files (if you add tests)
+coverage/
+.nyc_output/
+
+# Documentation Build (if you use tools like MkDocs)
+site/
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+$RECYCLE.BIN/
+
+# Linux
+.directory

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StackScope - Technology Detector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+            <div class="logo-text">
+              <h1 class="title">StackScope</h1>
+              <p class="subtitle">2,390+ Technologies</p>
+            </div>
+          </div>
+        </div>
+        <button id="detectBtn" class="btn btn-primary" title="Detect technologies on this page">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+          <span>Scan</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Loading State -->
+    <div id="loadingState" class="state-container hidden">
+      <div class="loader"></div>
+      <p class="state-message">Analyzing page...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="errorState" class="state-container hidden">
+      <div class="error-icon">⚠️</div>
+      <p class="state-message error-message" id="errorMessage"></p>
+      <button id="retryBtn" class="btn btn-secondary">Try Again</button>
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="state-container">
+      <div class="empty-illustration">
+        <svg viewBox="0 0 200 200" class="empty-svg">
+          <circle cx="100" cy="100" r="80" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+          <path d="M70 90 L90 110 L130 70" stroke="#4f46e5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2 class="state-title">Ready to Scan</h2>
+      <p class="state-message">Click the Scan button to detect all technologies on this page</p>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <span class="feature-icon">⚡</span>
+          <span class="feature-text">Instant Detection</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🎯</span>
+          <span class="feature-text">2,390+ Tech Stack</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">📊</span>
+          <span class="feature-text">Detailed Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Container -->
+    <div id="resultsContainer" class="hidden">
+      <!-- Summary Bar -->
+      <div class="summary-bar">
+        <div class="summary-item">
+          <span class="summary-label">Technologies:</span>
+          <span class="summary-value" id="techCount">0</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Page:</span>
+          <span class="summary-value" id="pageTitle">-</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-bar">
+        <button id="exportJsonBtn" class="btn btn-small" title="Export as JSON">
+          <span class="btn-icon">📄</span>
+          JSON
+        </button>
+        <button id="exportCsvBtn" class="btn btn-small" title="Export as CSV">
+          <span class="btn-icon">📊</span>
+          CSV
+        </button>
+        <button id="copyBtn" class="btn btn-small" title="Copy to clipboard">
+          <span class="btn-icon">📋</span>
+          Copy
+        </button>
+      </div>
+
+      <!-- Filter/Sort Options -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M8 12h8M10 18h4"/>
+          </svg>
+          <select id="sortSelect" class="filter-select" title="Sort technologies">
+            <option value="confidence">Sort by Confidence</option>
+            <option value="name">Sort by Name</option>
+            <option value="category">Sort by Category</option>
+          </select>
+        </div>
+        <label class="toggle-label">
+          <input type="checkbox" id="showEvidenceToggle" checked>
+          <span>Show Evidence</span>
+        </label>
+      </div>
+
+      <!-- Technologies List -->
+      <div id="technologiesList" class="technologies-list">
+        <!-- Dynamic content will be inserted here -->
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#" id="settingsLink" class="footer-link" rel="noopener">Settings</a>
+          <span class="footer-divider">•</span>
+          <a href="#" id="aboutLink" class="footer-link" rel="noopener">About</a>
+          <span class="footer-divider">•</span>
+          <a href="#" id="privacyLink" class="footer-link" rel="noopener">Privacy</a>
+        </div>
+        <div class="footer-badge">
+          <span class="badge-text">v1.0.0</span>
+          <span class="badge-dot">•</span>
+          <span class="badge-count">2,390+ Tech</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
