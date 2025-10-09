@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - StackScope</title>
+    <meta name="description" content="StackScope Privacy Policy - Learn how we protect your privacy and data.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 40px 0 20px 0;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            color: var(--gray);
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--dark);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Privacy Policy</h1>
+        <p>StackScope - Your Privacy Matters</p>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="content">
+            <div class="highlight-box">
+                <h3>🔒 Privacy-First Approach</h3>
+                <p><strong>StackScope is built with privacy as a core principle.</strong> We don't collect, store, or transmit any personal data. All analysis happens locally in your browser.</p>
+            </div>
+
+            <h2>1. Information We Don't Collect</h2>
+            <p>StackScope is designed to respect your privacy. We explicitly <strong>DO NOT</strong> collect:</p>
+            <ul>
+                <li>Personal information (name, email, address, etc.)</li>
+                <li>Browsing history or URLs you visit</li>
+                <li>Website content or data from pages you analyze</li>
+                <li>IP addresses or location data</li>
+                <li>Cookies or tracking identifiers</li>
+                <li>Usage statistics or analytics</li>
+                <li>Any data that could identify you</li>
+            </ul>
+
+            <h2>2. How StackScope Works</h2>
+            <p>StackScope operates entirely within your browser:</p>
+            <ol>
+                <li><strong>Local Analysis:</strong> When you click "Scan", the extension analyzes the current webpage's HTML, JavaScript, and CSS locally in your browser.</li>
+                <li><strong>Pattern Matching:</strong> It compares the page content against our database of 2,390+ technology signatures stored locally in the extension.</li>
+                <li><strong>Display Results:</strong> Detected technologies are displayed only to you in the popup interface.</li>
+                <li><strong>No External Communication:</strong> No data is sent to external servers, APIs, or third parties.</li>
+            </ol>
+
+            <h2>3. Permissions Explained</h2>
+            <p>StackScope requires minimal permissions to function:</p>
+            
+            <h3>activeTab</h3>
+            <p>Allows the extension to read the content of the currently active tab when you click the "Scan" button. This is necessary to analyze the technologies used on the page.</p>
+
+            <h3>scripting</h3>
+            <p>Enables the extension to inject a content script that reads the page's HTML, JavaScript globals, and meta tags for technology detection.</p>
+
+            <p><strong>That's it!</strong> We don't request access to:</p>
+            <ul>
+                <li>All websites (only active tab when you click)</li>
+                <li>Your browsing history</li>
+                <li>Your downloads</li>
+                <li>Your bookmarks</li>
+                <li>Network requests</li>
+            </ul>
+
+            <h2>4. Data Storage</h2>
+            <p>StackScope stores minimal data locally on your device:</p>
+            <ul>
+                <li><strong>Technology Database:</strong> The fingerprints.json file containing 2,390+ technology signatures is stored as part of the extension.</li>
+                <li><strong>User Preferences:</strong> Settings like sort order and evidence display preferences are stored locally using Chrome's storage API.</li>
+                <li><strong>No Cloud Storage:</strong> Nothing is synced or stored in the cloud.</li>
+            </ul>
+
+            <h2>5. Third-Party Services</h2>
+            <p><strong>StackScope does not use any third-party services, analytics, or tracking tools.</strong></p>
+            <ul>
+                <li>No Google Analytics</li>
+                <li>No error tracking services</li>
+                <li>No advertising networks</li>
+                <li>No external APIs</li>
+            </ul>
+
+            <h2>6. Open Source Transparency</h2>
+            <p>StackScope is fully open source. You can:</p>
+            <ul>
+                <li>Review the complete source code on <a href="https://github.com/kreggscode/stackscope" target="_blank" rel="noopener">GitHub</a></li>
+                <li>Verify that no data collection occurs</li>
+                <li>Audit the permissions and functionality</li>
+                <li>Contribute improvements or report issues</li>
+            </ul>
+
+            <h2>7. Export Functionality</h2>
+            <p>When you use the export features (JSON/CSV):</p>
+            <ul>
+                <li>Data is generated locally in your browser</li>
+                <li>Files are downloaded directly to your device</li>
+                <li>No data is sent to external servers</li>
+                <li>You have complete control over the exported data</li>
+            </ul>
+
+            <h2>8. Updates to This Policy</h2>
+            <p>If we make changes to this privacy policy, we will:</p>
+            <ul>
+                <li>Update the "Last Updated" date below</li>
+                <li>Notify users through the extension update notes</li>
+                <li>Maintain our commitment to privacy</li>
+            </ul>
+
+            <h2>9. Children's Privacy</h2>
+            <p>StackScope does not knowingly collect any information from anyone, including children under 13. The extension is designed for developers and technical users.</p>
+
+            <h2>10. Your Rights</h2>
+            <p>Since we don't collect any personal data, there's nothing to:</p>
+            <ul>
+                <li>Request access to</li>
+                <li>Request deletion of</li>
+                <li>Request correction of</li>
+                <li>Opt out of</li>
+            </ul>
+            <p>Your privacy is protected by design.</p>
+
+            <h2>11. Contact Us</h2>
+            <p>If you have questions about this privacy policy or StackScope's privacy practices:</p>
+            <ul>
+                <li><strong>GitHub Issues:</strong> <a href="https://github.com/kreggscode/stackscope/issues" target="_blank" rel="noopener">Report on GitHub</a></li>
+                <li><strong>GitHub Discussions:</strong> <a href="https://github.com/kreggscode/stackscope/discussions" target="_blank" rel="noopener">Join the conversation</a></li>
+                <li><strong>Email:</strong> kreggscode@github.com</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>✅ Summary</h3>
+                <p><strong>StackScope is privacy-focused by design:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>✅ No data collection</li>
+                    <li>✅ No tracking or analytics</li>
+                    <li>✅ No external servers</li>
+                    <li>✅ All processing happens locally</li>
+                    <li>✅ Open source and transparent</li>
+                    <li>✅ Minimal permissions</li>
+                </ul>
+            </div>
+
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> January 2025</p>
+                <p><strong>Effective Date:</strong> January 2025</p>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://kreggscode.github.io/stackscope/" class="back-btn">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Made with 💜 by <a href="https://github.com/kreggscode">kreggscode</a></p>
+            <p style="margin-top: 10px; opacity: 0.7;">
+                <a href="https://github.com/kreggscode/stackscope">GitHub</a> • 
+                <a href="https://kreggscode.github.io/stackscope/">Home</a> • 
+                <a href="https://github.com/kreggscode/stackscope/blob/main/LICENSE">MIT License</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
