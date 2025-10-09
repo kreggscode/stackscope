@@ -122,7 +122,7 @@
       
       // Check if URL is accessible
       if (!tab.url || tab.url.startsWith('chrome://') || tab.url.startsWith('chrome-extension://')) {
-        throw new Error('Cannot analyze Chrome internal pages');
+        throw new Error('Chrome internal pages cannot be analyzed. Please navigate to a regular website.');
       }
       
       // Send detection request to background script
