@@ -64,22 +64,30 @@ StackScope is a privacy-focused Chrome extension that detects web technologies, 
    - Select the extension directory
    - The StackScope icon should appear in your toolbar
 
-4. **Pin the extension** (optional)
    - Click the puzzle piece icon in Chrome toolbar
    - Click the pin icon next to StackScope
 
-## 📖 Usage
+## 🎮 Usage
 
-1. **Navigate to any website** you want to analyze
+1. **Click the StackScope icon** in your browser toolbar
+2. **Click "Scan"** to analyze the current page
+3. **View results** - See all detected technologies with confidence scores
+4. **Export data** - Download as JSON or CSV for further analysis
+5. **Filter & Sort** - Organize results by confidence, name, or category
 
-2. **Click the StackScope icon** in your Chrome toolbar
+### ⚙️ Settings
 
-3. **Click "Detect"** to analyze the current page
+Access comprehensive settings by clicking the **"Settings"** link in the extension popup:
 
-4. **View results** including:
-   - Technology names with confidence scores
-   - Categories (Framework, CMS, Analytics, etc.)
-   - Evidence showing how each technology was detected
+- **🎨 Dark Mode** - Switch between light and dark themes
+- **🔄 Auto-Detection** - Control automatic scanning when opening the extension
+- **📊 Default Sort** - Choose how technologies are sorted by default
+- **👁️ Evidence Display** - Show/hide detection evidence by default
+- **🎯 Confidence Threshold** - Filter technologies by minimum confidence level
+- **🐛 Debug Mode** - Enable detailed console logging
+- **💾 Cache Results** - Remember results for recently visited pages
+
+Settings are automatically saved and synced across your devices.
 
 5. **Export results** (optional):
    - Click "JSON" to export as JSON

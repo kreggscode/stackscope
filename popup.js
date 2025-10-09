@@ -15,6 +15,7 @@
   const copyBtn = document.getElementById('copyBtn');
   const sortSelect = document.getElementById('sortSelect');
   const showEvidenceToggle = document.getElementById('showEvidenceToggle');
+  const themeToggle = document.getElementById('themeToggle');
   
   const loadingState = document.getElementById('loadingState');
   const errorState = document.getElementById('errorState');
@@ -29,22 +30,49 @@
   // State
   let currentResults = null;
   let currentTabId = null;
+  let settings = {
+    darkMode: false,
+    autoDetect: true,
+    defaultSort: 'confidence',
+    showEvidence: true,
+    confidenceThreshold: 0,
+    debugMode: false,
+    cacheResults: true
+  };
 
   /**
    * Initialize popup
    */
   async function init() {
     console.log('[StackScope Popup] Initializing...');
-    
+
+    // Load settings first
+    await loadSettings();
+
+    // Apply settings to UI elements
+    sortSelect.value = settings.defaultSort;
+    showEvidenceToggle.checked = settings.showEvidence;
+
+    applyTheme();
+
     // Get current tab
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     if (tabs.length > 0) {
       currentTabId = tabs[0].id;
-      
-      // Auto-detect on popup open
-      handleDetect();
+      // Check if we're on a Chrome internal page
+      const tab = tabs[0];
+      if (tab.url && !tab.url.startsWith('chrome://') && !tab.url.startsWith('chrome-extension://') && settings.autoDetect) {
+        // Only auto-detect on regular websites if enabled
+        handleDetect();
+      } else {
+        // Show empty state for internal pages or invalid URLs, or if auto-detect is disabled
+        showState('empty');
+      }
+    } else {
+      // No tab found, show empty state
+      showState('empty');
     }
-    
+
     // Setup event listeners
     setupEventListeners();
   }
@@ -60,6 +88,7 @@
     copyBtn.addEventListener('click', handleCopy);
     sortSelect.addEventListener('change', handleSort);
     showEvidenceToggle.addEventListener('change', handleToggleEvidence);
+    themeToggle.addEventListener('click', handleThemeToggle);
     
     // Footer links
     document.getElementById('settingsLink').addEventListener('click', (e) => {
@@ -76,6 +105,71 @@
       e.preventDefault();
       chrome.tabs.create({ url: 'https://kreggscode.github.io/stackscope/privacy.html' });
     });
+  }
+
+  /**
+   * Load settings from storage
+   */
+  async function loadSettings() {
+    try {
+      const defaults = {
+        darkMode: false,
+        autoDetect: true,
+        defaultSort: 'confidence',
+        showEvidence: true,
+        confidenceThreshold: 0,
+        debugMode: false,
+        cacheResults: true
+      };
+      const result = await chrome.storage.sync.get(defaults);
+      // Merge defaults with loaded settings
+      settings = { ...defaults, ...result };
+      if (settings.debugMode) {
+        console.log('[StackScope Popup] Settings loaded:', settings);
+      }
+    } catch (error) {
+      console.error('[StackScope Popup] Failed to load settings:', error);
+      // Fallback to defaults
+      settings = {
+        darkMode: false,
+        autoDetect: true,
+        defaultSort: 'confidence',
+        showEvidence: true,
+        confidenceThreshold: 0,
+        debugMode: false,
+        cacheResults: true
+      };
+    }
+  }
+
+  /**
+   * Apply theme based on settings
+   */
+  function applyTheme() {
+    const isDark = settings.darkMode;
+    const newIcon = isDark ? '☀️' : '🌙';
+
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+
+    // Update icon with smooth transition
+    const themeIcon = document.getElementById('themeIcon');
+    if (themeIcon) {
+      if (themeIcon.textContent !== newIcon) {
+        themeIcon.style.opacity = '0';
+        setTimeout(() => {
+          themeIcon.textContent = newIcon;
+          themeIcon.style.opacity = '1';
+        }, 150);
+      } else if (!themeIcon.textContent) {
+        // Initial load - set icon immediately without transition
+        themeIcon.textContent = newIcon;
+        themeIcon.style.opacity = '1';
+      }
+    }
   }
 
   /**
@@ -149,15 +243,21 @@
    */
   function displayResults(data) {
     currentResults = data;
-    
+
+    // Filter technologies by confidence threshold
+    let filteredTechnologies = data.technologies;
+    if (settings.confidenceThreshold > 0) {
+      filteredTechnologies = data.technologies.filter(tech => tech.confidence >= settings.confidenceThreshold);
+    }
+
     // Update summary
-    techCount.textContent = data.technologies.length;
+    techCount.textContent = filteredTechnologies.length;
     pageTitle.textContent = data.title || new URL(data.url).hostname;
     pageTitle.title = data.title;
-    
+
     // Render technologies
-    renderTechnologies(data.technologies);
-    
+    renderTechnologies(filteredTechnologies);
+
     // Show results
     showState('results');
   }
@@ -273,10 +373,15 @@
    */
   function handleSort() {
     if (!currentResults) return;
-    
+
     const sortBy = sortSelect.value;
-    const technologies = [...currentResults.technologies];
-    
+    let technologies = [...currentResults.technologies];
+
+    // Filter by confidence threshold first
+    if (settings.confidenceThreshold > 0) {
+      technologies = technologies.filter(tech => tech.confidence >= settings.confidenceThreshold);
+    }
+
     switch (sortBy) {
       case 'confidence':
         technologies.sort((a, b) => b.confidence - a.confidence);
@@ -292,7 +397,7 @@
         });
         break;
     }
-    
+
     renderTechnologies(technologies);
   }
 
@@ -301,7 +406,33 @@
    */
   function handleToggleEvidence() {
     if (!currentResults) return;
-    renderTechnologies(currentResults.technologies);
+
+    let technologies = [...currentResults.technologies];
+
+    // Filter by confidence threshold first
+    if (settings.confidenceThreshold > 0) {
+      technologies = technologies.filter(tech => tech.confidence >= settings.confidenceThreshold);
+    }
+
+    renderTechnologies(technologies);
+  }
+
+  /**
+   * Handle theme toggle
+   */
+  async function handleThemeToggle() {
+    settings.darkMode = !settings.darkMode;
+    applyTheme();
+
+    // Save the setting
+    try {
+      await chrome.storage.sync.set({ darkMode: settings.darkMode });
+      if (settings.debugMode) {
+        console.log('[StackScope Popup] Theme toggled:', settings.darkMode);
+      }
+    } catch (error) {
+      console.error('[StackScope Popup] Failed to save theme setting:', error);
+    }
   }
 
   /**
@@ -418,5 +549,34 @@
 
   // Initialize on load
   document.addEventListener('DOMContentLoaded', init);
+
+  // Listen for storage changes to sync with options page
+  chrome.storage.onChanged.addListener((changes, namespace) => {
+    if (namespace === 'sync') {
+      // Update settings object with all changes
+      Object.keys(changes).forEach(key => {
+        settings[key] = changes[key].newValue;
+      });
+
+      // Re-apply theme
+      applyTheme();
+
+      // Update UI elements to reflect new settings
+      const sortSelect = document.getElementById('sortSelect');
+      const showEvidenceToggle = document.getElementById('showEvidenceToggle');
+
+      if (sortSelect) sortSelect.value = settings.defaultSort;
+      if (showEvidenceToggle) showEvidenceToggle.checked = settings.showEvidence;
+
+      // Re-filter results if we have them
+      if (currentResults) {
+        let filteredTechnologies = currentResults.technologies;
+        if (settings.confidenceThreshold > 0) {
+          filteredTechnologies = currentResults.technologies.filter(tech => tech.confidence >= settings.confidenceThreshold);
+        }
+        renderTechnologies(filteredTechnologies);
+      }
+    }
+  });
 
 })();
