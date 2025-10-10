@@ -87,7 +87,7 @@ Access comprehensive settings by clicking the **"Settings"** link in the extensi
 - **🐛 Debug Mode** - Enable detailed console logging
 - **💾 Cache Results** - Remember results for recently visited pages
 
-Settings are automatically saved and synced across your devices.
+Settings are automatically saved and synced across your devices. 
 
 5. **Export results** (optional):
    - Click "JSON" to export as JSON
