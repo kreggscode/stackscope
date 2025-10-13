@@ -12,8 +12,6 @@
 
 // Service worker installation
 chrome.runtime.onInstalled.addListener((details) => {
-  console.log('[StackScope] Extension installed/updated', details.reason);
-  
   if (details.reason === 'install') {
     // First-time installation
     chrome.storage.local.set({
@@ -29,7 +27,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 
 // Service worker startup
 chrome.runtime.onStartup.addListener(() => {
-  console.log('[StackScope] Browser started, service worker activated');
+  // Service worker activated
 });
 
 /**
@@ -39,8 +37,6 @@ chrome.runtime.onStartup.addListener(() => {
  * - getResults: Retrieve cached results for current tab
  */
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log('[StackScope] Message received:', message.action);
-  
   if (message.action === 'detectTechnologies') {
     handleDetection(message.tabId)
       .then(results => sendResponse({ success: true, data: results }))
@@ -163,8 +159,6 @@ async function saveDetectionResults(results) {
     }
     
     await chrome.storage.local.set({ detectionHistory });
-    
-    console.log('[StackScope] Results saved successfully');
   } catch (error) {
     console.error('[StackScope] Failed to save results:', error);
     throw error;
@@ -180,18 +174,15 @@ let keepAliveInterval;
 
 chrome.runtime.onConnect.addListener((port) => {
   if (port.name === 'keepAlive') {
-    console.log('[StackScope] Keep-alive connection established');
-    
     if (keepAliveInterval) {
       clearInterval(keepAliveInterval);
     }
-    
+
     keepAliveInterval = setInterval(() => {
-      console.log('[StackScope] Keep-alive ping');
+      // Keep-alive ping
     }, 20000); // Ping every 20 seconds
-    
+
     port.onDisconnect.addListener(() => {
-      console.log('[StackScope] Keep-alive connection closed');
       if (keepAliveInterval) {
         clearInterval(keepAliveInterval);
         keepAliveInterval = null;
@@ -199,5 +190,3 @@ chrome.runtime.onConnect.addListener((port) => {
     });
   }
 });
-
-console.log('[StackScope] Background service worker initialized');

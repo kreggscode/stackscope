@@ -37,47 +37,49 @@
       </div>
     </header>
 
-    <!-- Loading State -->
-    <div id="loadingState" class="state-container hidden">
-      <div class="loader"></div>
-      <p class="state-message">Analyzing page...</p>
-    </div>
-
-    <!-- Error State -->
-    <div id="errorState" class="state-container hidden">
-      <div class="error-icon">⚠️</div>
-      <p class="state-message error-message" id="errorMessage"></p>
-      <button id="retryBtn" class="btn btn-secondary">Try Again</button>
-    </div>
-
-    <!-- Empty State -->
-    <div id="emptyState" class="state-container">
-      <div class="empty-illustration">
-        <svg viewBox="0 0 200 200" class="empty-svg">
-          <circle cx="100" cy="100" r="80" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
-          <path d="M70 90 L90 110 L130 70" stroke="#4f46e5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+      <!-- Loading State -->
+      <div id="loadingState" class="state-container hidden">
+        <div class="loader"></div>
+        <p class="state-message">Analyzing page...</p>
       </div>
-      <h2 class="state-title">Ready to Scan</h2>
-      <p class="state-message">Click the Scan button to detect all technologies on this page</p>
-      <div class="feature-grid">
-        <div class="feature-item">
-          <span class="feature-icon">⚡</span>
-          <span class="feature-text">Instant Detection</span>
+
+      <!-- Error State -->
+      <div id="errorState" class="state-container hidden">
+        <div class="error-icon">⚠️</div>
+        <p class="state-message error-message" id="errorMessage"></p>
+        <button id="retryBtn" class="btn btn-secondary">Try Again</button>
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="state-container">
+        <div class="empty-illustration">
+          <svg viewBox="0 0 200 200" class="empty-svg">
+            <circle cx="100" cy="100" r="80" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+            <path d="M70 90 L90 110 L130 70" stroke="#4f46e5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-        <div class="feature-item">
-          <span class="feature-icon">🎯</span>
-          <span class="feature-text">2,390+ Tech Stack</span>
-        </div>
-        <div class="feature-item">
-          <span class="feature-icon">📊</span>
-          <span class="feature-text">Detailed Analysis</span>
+        <h2 class="state-title">Ready to Scan</h2>
+        <p class="state-message">Click the Scan button to detect all technologies on this page</p>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <span class="feature-icon">⚡</span>
+            <span class="feature-text">Instant Detection</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎯</span>
+            <span class="feature-text">2,390+ Tech Stack</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📊</span>
+            <span class="feature-text">Detailed Analysis</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Results Container -->
-    <div id="resultsContainer" class="hidden">
+      <!-- Results Container -->
+      <div id="resultsContainer" class="hidden">
       <!-- Summary Bar -->
       <div class="summary-bar">
         <div class="summary-item">
@@ -129,25 +131,26 @@
         <!-- Dynamic content will be inserted here -->
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-links">
-          <a href="#" id="settingsLink" class="footer-link" rel="noopener">Settings</a>
-          <span class="footer-divider">•</span>
-          <a href="#" id="aboutLink" class="footer-link" rel="noopener">About</a>
-          <span class="footer-divider">•</span>
-          <a href="#" id="privacyLink" class="footer-link" rel="noopener">Privacy</a>
-        </div>
-        <div class="footer-badge">
-          <span class="badge-text">v1.0.0</span>
-          <span class="badge-dot">•</span>
-          <span class="badge-count">2,390+ Tech</span>
-        </div>
-      </div>
-    </footer>
+    </div>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#" id="settingsLink" class="footer-link" rel="noopener">Settings</a>
+        <span class="footer-divider">•</span>
+        <a href="#" id="aboutLink" class="footer-link" rel="noopener">About</a>
+        <span class="footer-divider">•</span>
+        <a href="#" id="privacyLink" class="footer-link" rel="noopener">Privacy</a>
+      </div>
+      <div class="footer-badge">
+        <span class="badge-text">v1.0.0</span>
+        <span class="badge-dot">•</span>
+        <span class="badge-count">2,390+ Tech</span>
+      </div>
+    </div>
+  </footer>
 
   <script src="popup.js"></script>
 </body>

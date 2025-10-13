@@ -44,8 +44,6 @@
    * Initialize popup
    */
   async function init() {
-    console.log('[StackScope Popup] Initializing...');
-
     // Load settings first
     await loadSettings();
 
@@ -124,9 +122,6 @@
       const result = await chrome.storage.sync.get(defaults);
       // Merge defaults with loaded settings
       settings = { ...defaults, ...result };
-      if (settings.debugMode) {
-        console.log('[StackScope Popup] Settings loaded:', settings);
-      }
     } catch (error) {
       console.error('[StackScope Popup] Failed to load settings:', error);
       // Fallback to defaults
@@ -187,7 +182,6 @@
         // Check if results are for current tab
         const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
         if (tabs.length > 0 && data.url === tabs[0].url) {
-          console.log('[StackScope Popup] Loaded cached results');
           displayResults(data);
         }
       }
@@ -200,8 +194,6 @@
    * Handle detect button click
    */
   async function handleDetect() {
-    console.log('[StackScope Popup] Starting detection...');
-    
     showState('loading');
     
     try {
@@ -228,8 +220,7 @@
       if (!response.success) {
         throw new Error(response.error || 'Detection failed');
       }
-      
-      console.log('[StackScope Popup] Detection complete:', response.data);
+
       displayResults(response.data);
       
     } catch (error) {
@@ -427,9 +418,6 @@
     // Save the setting
     try {
       await chrome.storage.sync.set({ darkMode: settings.darkMode });
-      if (settings.debugMode) {
-        console.log('[StackScope Popup] Theme toggled:', settings.darkMode);
-      }
     } catch (error) {
       console.error('[StackScope Popup] Failed to save theme setting:', error);
     }

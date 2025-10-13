@@ -21,7 +21,6 @@
 
   // Prevent multiple injections
   if (window.StackScopeDetector) {
-    console.log('[StackScope] Detector already loaded');
     return;
   }
 
@@ -41,8 +40,6 @@
      * @returns {Array} Detected technologies with evidence
      */
     detect(fingerprints) {
-      console.log('[StackScope] Starting detection with', fingerprints.length, 'fingerprints');
-      
       this.detectedTechnologies.clear();
       this.evidence.clear();
 
@@ -56,9 +53,7 @@
       
       // Convert results to array with confidence scores
       const results = this.calculateResults();
-      
-      console.log('[StackScope] Detection complete. Found', results.length, 'technologies');
-      
+
       return results;
     }
 
@@ -301,7 +296,6 @@
       this.mutationObserver = new MutationObserver(() => {
         clearTimeout(debounceTimer);
         debounceTimer = setTimeout(() => {
-          console.log('[StackScope] DOM mutation detected, re-running detection');
           const results = this.detect(fingerprints);
           if (callback) callback(results);
         }, 2000); // Debounce 2 seconds
@@ -328,7 +322,5 @@
 
   // Expose detector to window for background script access
   window.StackScopeDetector = new TechnologyDetector();
-  
-  console.log('[StackScope] Detector loaded and ready');
 
 })();
