@@ -207,14 +207,14 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🔍 StackScope</h1>
-            <p>Icon Generator</p>
+            <h1>🚀 StackScope</h1>
+            <p>Professional Icon Generator</p>
         </div>
 
         <div class="content">
             <div class="instructions">
-                <h2>Generate Chrome Extension Icons</h2>
-                <p>Click download buttons below to generate PNG icons for your StackScope extension</p>
+                <h2>🎨 Generate Professional Icons</h2>
+                <p>Advanced technology detection icon with radar scanning, tech stack visualization, and pulsing effects</p>
             </div>
 
             <div class="icon-grid">
@@ -222,17 +222,51 @@
                     <div class="icon-size">TOOLBAR ICON</div>
                     <div class="icon-container">
                         <svg class="icon icon-16" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="64" cy="64" r="60" fill="#4F46E5"/>
-                            <circle cx="64" cy="64" r="50" fill="#6366F1"/>
-                            <circle cx="64" cy="64" r="40" fill="#8B5CF6"/>
-                            <rect x="54" y="54" width="20" height="20" rx="4" fill="white"/>
-                            <rect x="58" y="58" width="12" height="12" rx="2" fill="#4F46E5"/>
-                            <circle cx="64" cy="64" r="6" fill="white"/>
-                            <circle cx="64" cy="64" r="3" fill="#4F46E5"/>
-                            <path d="M44 44 L52 52" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M84 44 L76 52" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M44 84 L52 76" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M84 84 L76 76" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Outer ring with gradient -->
+                            <circle cx="64" cy="64" r="58" fill="url(#gradient1)" stroke="#1e1b4b" stroke-width="2"/>
+                            <!-- Middle ring -->
+                            <circle cx="64" cy="64" r="45" fill="url(#gradient2)" stroke="#312e81" stroke-width="1"/>
+                            <!-- Inner core -->
+                            <circle cx="64" cy="64" r="32" fill="url(#gradient3)" stroke="#4338ca" stroke-width="1"/>
+
+                            <!-- Technology detection elements -->
+                            <!-- Radar/scanner lines -->
+                            <path d="M32 64 L96 64" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M64 32 L64 96" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="64" cy="64" r="20" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+                            <circle cx="64" cy="64" r="12" stroke="#f59e0b" stroke-width="1" fill="none"/>
+
+                            <!-- Technology stack layers -->
+                            <rect x="54" y="48" width="16" height="3" rx="1.5" fill="#10b981"/>
+                            <rect x="52" y="54" width="24" height="3" rx="1.5" fill="#06b6d4"/>
+                            <rect x="50" y="60" width="28" height="3" rx="1.5" fill="#8b5cf6"/>
+                            <rect x="48" y="66" width="32" height="3" rx="1.5" fill="#ec4899"/>
+
+                            <!-- Scanning pulse effect -->
+                            <circle cx="64" cy="64" r="8" fill="#fbbf24" opacity="0.8">
+                                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+
+                            <!-- Central detection point -->
+                            <circle cx="64" cy="64" r="4" fill="#1e1b4b"/>
+                            <circle cx="64" cy="64" r="2" fill="#fbbf24"/>
+
+                            <!-- Gradient definitions -->
+                            <defs>
+                                <radialGradient id="gradient1" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                </radialGradient>
+                                <radialGradient id="gradient2" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                                </radialGradient>
+                                <radialGradient id="gradient3" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                </radialGradient>
+                            </defs>
                         </svg>
                     </div>
                     <button class="download-btn" data-size="16" data-filename="icon16.png">Download 16×16</button>
@@ -242,17 +276,51 @@
                     <div class="icon-size">EXTENSIONS PAGE</div>
                     <div class="icon-container">
                         <svg class="icon icon-48" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="64" cy="64" r="60" fill="#4F46E5"/>
-                            <circle cx="64" cy="64" r="50" fill="#6366F1"/>
-                            <circle cx="64" cy="64" r="40" fill="#8B5CF6"/>
-                            <rect x="54" y="54" width="20" height="20" rx="4" fill="white"/>
-                            <rect x="58" y="58" width="12" height="12" rx="2" fill="#4F46E5"/>
-                            <circle cx="64" cy="64" r="6" fill="white"/>
-                            <circle cx="64" cy="64" r="3" fill="#4F46E5"/>
-                            <path d="M44 44 L52 52" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M84 44 L76 52" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M44 84 L52 76" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M84 84 L76 76" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Outer ring with gradient -->
+                            <circle cx="64" cy="64" r="58" fill="url(#gradient1)" stroke="#1e1b4b" stroke-width="2"/>
+                            <!-- Middle ring -->
+                            <circle cx="64" cy="64" r="45" fill="url(#gradient2)" stroke="#312e81" stroke-width="1"/>
+                            <!-- Inner core -->
+                            <circle cx="64" cy="64" r="32" fill="url(#gradient3)" stroke="#4338ca" stroke-width="1"/>
+
+                            <!-- Technology detection elements -->
+                            <!-- Radar/scanner lines -->
+                            <path d="M32 64 L96 64" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M64 32 L64 96" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="64" cy="64" r="20" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+                            <circle cx="64" cy="64" r="12" stroke="#f59e0b" stroke-width="1" fill="none"/>
+
+                            <!-- Technology stack layers -->
+                            <rect x="54" y="48" width="16" height="3" rx="1.5" fill="#10b981"/>
+                            <rect x="52" y="54" width="24" height="3" rx="1.5" fill="#06b6d4"/>
+                            <rect x="50" y="60" width="28" height="3" rx="1.5" fill="#8b5cf6"/>
+                            <rect x="48" y="66" width="32" height="3" rx="1.5" fill="#ec4899"/>
+
+                            <!-- Scanning pulse effect -->
+                            <circle cx="64" cy="64" r="8" fill="#fbbf24" opacity="0.8">
+                                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+
+                            <!-- Central detection point -->
+                            <circle cx="64" cy="64" r="4" fill="#1e1b4b"/>
+                            <circle cx="64" cy="64" r="2" fill="#fbbf24"/>
+
+                            <!-- Gradient definitions -->
+                            <defs>
+                                <radialGradient id="gradient1" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                </radialGradient>
+                                <radialGradient id="gradient2" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                                </radialGradient>
+                                <radialGradient id="gradient3" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                </radialGradient>
+                            </defs>
                         </svg>
                     </div>
                     <button class="download-btn" data-size="48" data-filename="icon48.png">Download 48×48</button>
@@ -262,17 +330,51 @@
                     <div class="icon-size">WEB STORE</div>
                     <div class="icon-container">
                         <svg class="icon icon-128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="64" cy="64" r="60" fill="#4F46E5"/>
-                            <circle cx="64" cy="64" r="50" fill="#6366F1"/>
-                            <circle cx="64" cy="64" r="40" fill="#8B5CF6"/>
-                            <rect x="54" y="54" width="20" height="20" rx="4" fill="white"/>
-                            <rect x="58" y="58" width="12" height="12" rx="2" fill="#4F46E5"/>
-                            <circle cx="64" cy="64" r="6" fill="white"/>
-                            <circle cx="64" cy="64" r="3" fill="#4F46E5"/>
-                            <path d="M44 44 L52 52" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M84 44 L76 52" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M44 84 L52 76" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M84 84 L76 76" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Outer ring with gradient -->
+                            <circle cx="64" cy="64" r="58" fill="url(#gradient1)" stroke="#1e1b4b" stroke-width="2"/>
+                            <!-- Middle ring -->
+                            <circle cx="64" cy="64" r="45" fill="url(#gradient2)" stroke="#312e81" stroke-width="1"/>
+                            <!-- Inner core -->
+                            <circle cx="64" cy="64" r="32" fill="url(#gradient3)" stroke="#4338ca" stroke-width="1"/>
+
+                            <!-- Technology detection elements -->
+                            <!-- Radar/scanner lines -->
+                            <path d="M32 64 L96 64" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M64 32 L64 96" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="64" cy="64" r="20" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+                            <circle cx="64" cy="64" r="12" stroke="#f59e0b" stroke-width="1" fill="none"/>
+
+                            <!-- Technology stack layers -->
+                            <rect x="54" y="48" width="16" height="3" rx="1.5" fill="#10b981"/>
+                            <rect x="52" y="54" width="24" height="3" rx="1.5" fill="#06b6d4"/>
+                            <rect x="50" y="60" width="28" height="3" rx="1.5" fill="#8b5cf6"/>
+                            <rect x="48" y="66" width="32" height="3" rx="1.5" fill="#ec4899"/>
+
+                            <!-- Scanning pulse effect -->
+                            <circle cx="64" cy="64" r="8" fill="#fbbf24" opacity="0.8">
+                                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+
+                            <!-- Central detection point -->
+                            <circle cx="64" cy="64" r="4" fill="#1e1b4b"/>
+                            <circle cx="64" cy="64" r="2" fill="#fbbf24"/>
+
+                            <!-- Gradient definitions -->
+                            <defs>
+                                <radialGradient id="gradient1" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                </radialGradient>
+                                <radialGradient id="gradient2" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                                </radialGradient>
+                                <radialGradient id="gradient3" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                </radialGradient>
+                            </defs>
                         </svg>
                     </div>
                     <button class="download-btn" data-size="128" data-filename="icon128.png">Download 128×128</button>
@@ -285,7 +387,7 @@
         </div>
 
         <div class="footer">
-            <p>StackScope Icon Generator</p>
+            <p>StackScope • Professional Technology Detection</p>
         </div>
     </div>
 
