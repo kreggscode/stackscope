@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![StackScope Logo](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/logo.png)
+![StackScope Logo](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/1.png)
 
 **Discover the complete tech stack behind any website instantly**
 
@@ -13,7 +13,7 @@
 
 *Detect 2,390+ web technologies across 100+ categories*
 
-![Main Interface](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/main-interface.png)
+![Main Interface](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/2.png)
 
 </div>
 
@@ -52,7 +52,7 @@ StackScope identifies technologies across all major categories:
 - Tag Managers: Google Tag Manager
 - Security: reCAPTCHA, Cloudflare, hCaptcha
 
-![Technology Categories](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/categories.png)
+![Technology Categories](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/3.png)
 
 ### 🎨 **Modern Interface**
 - **Clean Design** - Professional UI with smooth animations
@@ -62,7 +62,7 @@ StackScope identifies technologies across all major categories:
 - **Export Options** - JSON, CSV, and clipboard export
 - **Smart Filtering** - Sort by confidence, name, or category
 
-![Results View](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/results.png)
+![Results View](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/4.png)
 
 ### 🔐 **Privacy & Security**
 - **Zero Data Collection** - Nothing sent to external servers
@@ -72,7 +72,7 @@ StackScope identifies technologies across all major categories:
 - **No Tracking** - No analytics or data collection
 - **Chrome Web Store Verified** - Meets all privacy requirements
 
-![Privacy Features](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/privacy.png)
+![Privacy Features](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/5.png)
 
 ## 🚀 Installation
 
@@ -86,10 +86,10 @@ StackScope identifies technologies across all major categories:
 <div align="center">
 
 **Step 1: Download**
-```bash
+   ```bash
 git clone https://github.com/kreggscode/stackscope.git
-cd stackscope
-```
+   cd stackscope
+   ```
 
 **Step 2: Load in Chrome**
 ```
@@ -100,7 +100,7 @@ cd stackscope
 5. StackScope icon appears in toolbar
 ```
 
-![Installation Steps](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/installation.png)
+![Installation Steps](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/6.png)
 
 </div>
 
@@ -123,7 +123,7 @@ cd stackscope
 - **Categories**: Grouped by type (Frontend, Backend, Analytics, etc.)
 - **Export Options**: JSON, CSV, or clipboard copy
 
-![Usage Demo](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/usage.png)
+![Usage Demo](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/1.png)
 
 ### ⚙️ **Settings & Customization**
 Access settings via the footer link in the popup:
