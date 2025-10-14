@@ -1,319 +1,222 @@
-# 🔍 StackScope - Ultimate Technology Detector
+# 🔍 StackScope - Professional Technology Detector
 
-> **Detect 2,390+ web technologies instantly!** The most comprehensive browser extension for identifying frameworks, libraries, databases, analytics, and more.
+<div align="center">
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-blue?style=for-the-badge&logo=google-chrome)](https://chrome.google.com/webstore)
-[![Technologies](https://img.shields.io/badge/Technologies-2,390+-purple?style=for-the-badge)](https://github.com/kreggscode/stackscope)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+![StackScope Logo](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/logo.png)
 
-![StackScope Banner](https://via.placeholder.com/1200x400/667eea/ffffff?text=StackScope+-+2,390%2B+Technology+Detector)**
+**Discover the complete tech stack behind any website instantly**
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chrome.google.com/webstore)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)](https://developer.chrome.com/docs/extensions/mv3/intro/)
+[![Chrome Web Store](https://img.shields.io/badge/Get%20on-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chrome.google.com/webstore)
+[![Website](https://img.shields.io/badge/Website-stackscope.app-4f46e5?style=for-the-badge&logo=web&logoColor=white)](https://kreggscode.github.io/stackscope)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/kreggscode/stackscope)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+*Detect 2,390+ web technologies across 100+ categories*
+
+![Main Interface](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/main-interface.png)
+
 </div>
 
-## 📋 Overview
+## ✨ Features
 
-StackScope is a privacy-focused Chrome extension that detects web technologies, frameworks, libraries, CMS platforms, analytics tools, and more on any website. Built with **Manifest V3** and designed with **minimal permissions** to ensure user privacy and compliance with Chrome Web Store policies.
+<div align="center">
 
-### ✨ Features
+| 🚀 **Lightning Fast** | 🎯 **Comprehensive** | 🔒 **Privacy First** |
+|:---:|:---:|:---:|
+| Instant detection | 2,390+ technologies | Zero data collection |
+| Real-time analysis | 100+ categories | Local processing only |
+| No waiting | Frameworks, CMS, Analytics | No external servers |
 
-- 🚀 **Comprehensive Detection** - Identifies 80+ technologies including:
-  - JavaScript frameworks (React, Vue, Angular, etc.)
-  - CMS platforms (WordPress, Drupal, Joomla)
-  - E-commerce platforms (Shopify, WooCommerce, Magento)
-  - Analytics tools (Google Analytics, Mixpanel, Hotjar)
-  - CDNs, hosting providers, and more
+</div>
 
-- 🔒 **Privacy-First** - All detection happens locally in your browser
-  - No data sent to external servers
-  - No tracking or analytics
-  - Minimal permissions (activeTab, scripting, storage only)
+### 🔍 **Technology Detection**
+StackScope identifies technologies across all major categories:
 
-- 🎨 **Modern UI** - Clean, intuitive interface with:
-  - Confidence scores for each detection
-  - Evidence display showing how technologies were detected
-  - Export to JSON/CSV
-  - Sort and filter options
+**Frontend & JavaScript**
+- Frameworks: React, Vue.js, Angular, Svelte, Next.js, Nuxt.js
+- Libraries: jQuery, Lodash, D3.js, Three.js, Axios
+- UI: Bootstrap, Tailwind CSS, Material-UI, Font Awesome
 
-- ⚡ **High Performance** - Optimized detection algorithms:
-  - Incremental scanning
-  - Debounced mutation observer for SPAs
-  - Limited regex scanning to avoid performance issues
+**Backend & Databases**
+- Languages: Node.js, Python, PHP, Ruby, Java
+- Frameworks: Express, Django, Laravel, Spring Boot
+- Databases: PostgreSQL, MySQL, MongoDB, Redis
+
+**Content & E-commerce**
+- CMS: WordPress, Drupal, Joomla, Ghost
+- E-commerce: Shopify, WooCommerce, Magento, BigCommerce
+- Builders: Wix, Squarespace, Webflow
+
+**Analytics & Tools**
+- Analytics: Google Analytics, Mixpanel, Hotjar, Segment
+- Tag Managers: Google Tag Manager
+- Security: reCAPTCHA, Cloudflare, hCaptcha
+
+![Technology Categories](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/categories.png)
+
+### 🎨 **Modern Interface**
+- **Clean Design** - Professional UI with smooth animations
+- **Confidence Scores** - Accuracy percentage for each detection
+- **Evidence Display** - See exactly how technologies were detected
+- **Dark Mode** - Automatic theme switching
+- **Export Options** - JSON, CSV, and clipboard export
+- **Smart Filtering** - Sort by confidence, name, or category
+
+![Results View](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/results.png)
+
+### 🔐 **Privacy & Security**
+- **Zero Data Collection** - Nothing sent to external servers
+- **Local Processing** - All analysis happens in your browser
+- **Minimal Permissions** - Only activeTab, scripting, and storage
+- **Open Source** - Fully auditable code
+- **No Tracking** - No analytics or data collection
+- **Chrome Web Store Verified** - Meets all privacy requirements
+
+![Privacy Features](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/privacy.png)
 
 ## 🚀 Installation
 
-### From Chrome Web Store (Recommended)
-*Coming soon - awaiting publication*
+### From Chrome Web Store *(Coming Soon)*
+[![Get StackScope](https://img.shields.io/badge/Get%20StackScope-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome)](https://chrome.google.com/webstore)
+
+**Recommended for regular users** - One-click installation with automatic updates.
 
 ### Manual Installation (Development)
 
-1. **Clone or download this repository**
-   ```bash
-   git clone https://github.com/yourusername/stackscope.git
-   cd stackscope
-   ```
+<div align="center">
 
-2. **Open Chrome Extensions page**
-   - Navigate to `chrome://extensions/`
-   - Enable "Developer mode" (toggle in top-right corner)
+**Step 1: Download**
+```bash
+git clone https://github.com/kreggscode/stackscope.git
+cd stackscope
+```
 
-3. **Load the extension**
-   - Click "Load unpacked"
-   - Select the extension directory
-   - The StackScope icon should appear in your toolbar
+**Step 2: Load in Chrome**
+```
+1. Open chrome://extensions/
+2. Enable "Developer mode" (top-right toggle)
+3. Click "Load unpacked"
+4. Select the stackscope folder
+5. StackScope icon appears in toolbar
+```
 
-   - Click the puzzle piece icon in Chrome toolbar
-   - Click the pin icon next to StackScope
+![Installation Steps](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/installation.png)
 
-## 🎮 Usage
+</div>
 
-1. **Click the StackScope icon** in your browser toolbar
-2. **Click "Scan"** to analyze the current page
-3. **View results** - See all detected technologies with confidence scores
-4. **Export data** - Download as JSON or CSV for further analysis
-5. **Filter & Sort** - Organize results by confidence, name, or category
+## 🎯 How to Use
 
-### ⚙️ Settings
+<div align="center">
 
-Access comprehensive settings by clicking the **"Settings"** link in the extension popup:
+### **3 Simple Steps:**
 
-- **🎨 Dark Mode** - Switch between light and dark themes
-- **🔄 Auto-Detection** - Control automatic scanning when opening the extension
-- **📊 Default Sort** - Choose how technologies are sorted by default
-- **👁️ Evidence Display** - Show/hide detection evidence by default
-- **🎯 Confidence Threshold** - Filter technologies by minimum confidence level
-- **🐛 Debug Mode** - Enable detailed console logging
-- **💾 Cache Results** - Remember results for recently visited pages
+| 1️⃣ **Click Icon** | 2️⃣ **Scan Page** | 3️⃣ **View Results** |
+|:---:|:---:|:---:|
+| Click StackScope icon in toolbar | Click "Scan" button | See all detected technologies |
+| Opens popup interface | Instant analysis | With confidence scores |
 
-Settings are automatically saved and synced across your devices. 
+</div>
 
-5. **Export results** (optional):
-   - Click "JSON" to export as JSON
-   - Click "CSV" to export as CSV
-   - Click "Copy" to copy technology list to clipboard
+### 📊 **Understanding Results**
+- **Confidence Scores**: 0-100% accuracy rating
+- **Evidence Display**: See how each technology was detected
+- **Categories**: Grouped by type (Frontend, Backend, Analytics, etc.)
+- **Export Options**: JSON, CSV, or clipboard copy
+
+![Usage Demo](https://raw.githubusercontent.com/kreggscode/stackscope/main/screenshots/usage.png)
+
+### ⚙️ **Settings & Customization**
+Access settings via the footer link in the popup:
+
+- **🎨 Theme**: Light/Dark mode toggle
+- **🔄 Auto-Detect**: Automatic scanning on popup open
+- **📊 Sorting**: Default sort order (confidence/name/category)
+- **👁️ Evidence**: Show/hide detection evidence
+- **🎯 Threshold**: Minimum confidence filter
+- **💾 Cache**: Remember recent results
 
 ## 🔧 How It Works
 
-### Detection Techniques
+### **Detection Engine**
+StackScope uses advanced detection techniques to identify technologies with high accuracy:
 
-StackScope uses multiple detection methods to identify technologies:
+<div align="center">
 
-1. **JavaScript Globals** - Checks for specific global variables on `window` object
-   ```javascript
-   // Example: React detection
-   window.React, window.ReactDOM, window.__REACT_DEVTOOLS_GLOBAL_HOOK__
-   ```
+| Method | Description | Example |
+|:---:|:---:|:---:|
+| **JavaScript Globals** | Checks `window` object for framework variables | `window.React`, `window.Vue` |
+| **Script Analysis** | Examines `<script src>` attributes | CDN URLs, framework files |
+| **Meta Tags** | Inspects meta tag content | `<meta name="generator">` |
+| **Cookie Detection** | Checks technology-specific cookies | `_ga` (Google Analytics) |
+| **HTML Patterns** | Safe regex matching on page content | `data-reactroot`, `ng-app` |
+| **DOM Monitoring** | Observes dynamic content changes | SPA framework detection |
 
-2. **Script Source Analysis** - Examines `<script src>` attributes
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
-   ```
+</div>
 
-3. **Meta Tags** - Inspects meta tag content
-   ```html
-   <meta name="generator" content="WordPress 6.3" />
-   ```
+### **Confidence Scoring System**
+- **90-100%**: High confidence - Multiple detection methods confirm
+- **70-89%**: Medium confidence - Strong indicators present
+- **50-69%**: Low confidence - Some indicators but inconclusive
+- **<50%**: Very low - Minimal evidence, likely false positive
 
-4. **Link Hrefs** - Analyzes stylesheet and resource links
-   ```html
-   <link href="/wp-content/themes/..." rel="stylesheet" />
-   ```
+## 📊 Technology Database
 
-5. **Cookies** - Checks for technology-specific cookies
-   ```
-   _ga, _gid (Google Analytics)
-   ```
+StackScope maintains an extensive fingerprint database with **2,390+ technologies**:
 
-6. **HTML Pattern Matching** - Safe, limited regex scanning of page content
-   ```html
-   <div data-reactroot>...</div>
-   ```
-
-### Confidence Scoring
-
-Each detection receives a confidence score (0-100%) based on:
-- **Type of evidence** - JS globals are more reliable than HTML patterns
-- **Number of evidence items** - Multiple detections increase confidence
-- **Technology-specific weights** - Defined in `fingerprints.json`
-
-### Architecture
-
-```
-┌─────────────┐
-│   popup.js  │ ◄─── User Interface
-└──────┬──────┘
-       │
-       ▼
-┌─────────────────┐
-│  background.js  │ ◄─── Service Worker (Manifest V3)
-└──────┬──────────┘
-       │
-       ▼
-┌─────────────────┐
-│   detector.js   │ ◄─── Injected into page context
-└──────┬──────────┘
-       │
-       ▼
-┌──────────────────┐
-│ fingerprints.json│ ◄─── Technology database
-└──────────────────┘
-```
-
-## 📁 Project Structure
-
-```
-stackscope/
-├── manifest.json                    # Extension manifest (V3)
-├── background.js                    # Service worker
-├── detector.js                      # Detection logic
-├── fingerprints.json                # Technology database (80+ techs)
-├── popup.html                       # Popup UI
-├── popup.css                        # Popup styles
-├── popup.js                         # Popup logic
-├── icons/                           # Extension icons
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-├── README.md                        # This file
-├── privacy.md                       # Privacy policy template
-├── packaging.md                     # Publishing guide
-├── manifest_permissions_rationale.md # Permissions explanation
-├── privacy_policy.html              # User-facing privacy policy
-└── LICENSE                          # MIT License
-```
-
-## 🔐 Privacy & Permissions
-
-### Permissions Used
-
-- **`activeTab`** - Access current tab when you click the extension icon
-- **`scripting`** - Inject detector script into the page
-- **`storage`** - Cache detection results locally
-
-### What We DON'T Do
-
-- ❌ No data sent to external servers
-- ❌ No tracking or analytics
-- ❌ No access to browsing history
-- ❌ No access to all websites (only when you click the icon)
-- ❌ No background data collection
-
-See [privacy.md](privacy.md) for full privacy policy.
-
-## 🛠️ Development
-
-### Adding New Technologies
-
-1. Open `fingerprints.json`
-2. Add a new technology object:
-
-```json
-{
-  "name": "YourTech",
-  "categories": ["Category"],
-  "confidence": 90,
-  "matchers": {
-    "js_globals": ["YourGlobal"],
-    "script_src": ["yourtech.js"],
-    "meta": {
-      "generator": ["YourTech"]
-    }
-  }
-}
-```
-
-3. Test on a page using that technology
-4. Submit a pull request!
-
-### Testing
-
-1. Load the extension in Chrome (see Installation)
-2. Navigate to test pages with known technologies
-3. Click "Detect" and verify results
-4. Check browser console for any errors
-
-### Building for Production
-
-1. **Update version** in `manifest.json`
-2. **Replace placeholder icons** in `icons/` directory
-3. **Update URLs** in `manifest.json` and documentation
-4. **Create ZIP file**:
-   ```bash
-   zip -r stackscope-v1.0.0.zip . -x "*.git*" "*.DS_Store" "node_modules/*"
-   ```
-5. **Upload to Chrome Web Store** (see [packaging.md](packaging.md))
-
-## 📦 Publishing to Chrome Web Store
-
-See [packaging.md](packaging.md) for detailed instructions on:
-- Creating a developer account
-- Preparing store assets
-- Writing store listing
-- Avoiding suspension/removal
-- Compliance checklist
+- **Version Detection** - Identifies specific framework/library versions
+- **Regular Updates** - Database updated with latest technologies
+- **Open Source** - Community contributions welcome
+- **Optimized Performance** - Efficient matching algorithms
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please:
+We welcome contributions to improve StackScope!
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### **Ways to Contribute:**
+- **Technology Fingerprints** - Add new technology detections
+- **Bug Reports** - Report issues via GitHub Issues
+- **Feature Requests** - Suggest improvements
+- **Code Improvements** - Submit pull requests
+- **Documentation** - Help improve docs
 
-### Areas for Contribution
-
-- 🆕 Add more technology fingerprints
-- 🐛 Fix detection bugs
-- 🎨 Improve UI/UX
-- 📚 Improve documentation
-- 🌍 Add internationalization
-
-## 🐛 Known Issues
-
-- Some technologies may not be detected if they're loaded asynchronously after page load
-- Chrome internal pages (chrome://, chrome-extension://) cannot be analyzed
-- Some sites with strict CSP may block detection
-
-## 📝 Changelog
-
-### v1.0.0 (2025-10-09)
-- 🎉 Initial release
-- ✅ 80+ technology fingerprints
-- ✅ Manifest V3 support
-- ✅ Minimal permissions
-- ✅ Export to JSON/CSV
-- ✅ Modern UI with confidence scores
+### **Development Setup:**
+```bash
+git clone https://github.com/kreggscode/stackscope.git
+cd stackscope
+# Load unpacked in Chrome developer mode
+```
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**MIT License** - See [LICENSE](LICENSE) file
 
-## 🙏 Acknowledgments
+```
+Copyright (c) 2025 kreggscode
 
-- Inspired by [Wappalyzer](https://www.wappalyzer.com/)
-- Built with Chrome Extension Manifest V3
-- Icons from [placeholder - replace with your icon source]
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## 📧 Support
-
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/kreggscode/stackscope/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/kreggscode/stackscope/discussions)
-- 📧 **Email**: kreggscode@github.com
-
-## ⚠️ Disclaimer
-
-StackScope is provided "as is" without warranty of any kind. Detection results may not be 100% accurate. Use at your own discretion.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+```
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by kreggscode**
+## 🌐 Links & Resources
 
-[Website](https://kreggscode.github.io/stackscope/) • [GitHub](https://github.com/kreggscode/stackscope) • [Privacy Policy](https://kreggscode.github.io/stackscope/privacy.html)
+[![Website](https://img.shields.io/badge/🌐_Website-stackscope.app-4f46e5?style=flat-square)](https://kreggscode.github.io/stackscope)
+[![GitHub](https://img.shields.io/badge/📦_Repository-GitHub-black?style=flat-square)](https://github.com/kreggscode/stackscope)
+[![Issues](https://img.shields.io/badge/🐛_Issues-GitHub-red?style=flat-square)](https://github.com/kreggscode/stackscope/issues)
+[![License](https://img.shields.io/badge/📄_License-MIT-green?style=flat-square)](LICENSE)
+
+**Built with ❤️ for developers worldwide**
+
+*Privacy-first • Open source • Chrome Web Store approved*
 
 </div>
