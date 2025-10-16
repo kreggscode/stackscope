@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "StackScope",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detect web technologies used on any website - frameworks, analytics, CMS, and more",
   "short_name": "StackScope",
   "author": "kreggscode",
@@ -23,7 +23,10 @@
     "default_title": "StackScope - Detect Technologies"
   },
 
-  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
 
   "background": {
     "service_worker": "background.js",

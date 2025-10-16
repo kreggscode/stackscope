@@ -82,29 +82,49 @@ class StackScopeSettings {
         // Other settings
         const autoDetectToggle = document.getElementById('autoDetectToggle');
         if (autoDetectToggle) {
-            autoDetectToggle.addEventListener('change', (e) => {
+            autoDetectToggle.addEventListener('change', async (e) => {
                 this.settings.autoDetect = e.target.checked;
+                try {
+                    await chrome.storage.sync.set({ autoDetect: this.settings.autoDetect });
+                } catch (error) {
+                    console.error('[StackScope Settings] Failed to save autoDetect:', error);
+                }
             });
         }
 
         const defaultSort = document.getElementById('defaultSort');
         if (defaultSort) {
-            defaultSort.addEventListener('change', (e) => {
+            defaultSort.addEventListener('change', async (e) => {
                 this.settings.defaultSort = e.target.value;
+                try {
+                    await chrome.storage.sync.set({ defaultSort: this.settings.defaultSort });
+                } catch (error) {
+                    console.error('[StackScope Settings] Failed to save defaultSort:', error);
+                }
             });
         }
 
         const showEvidenceToggle = document.getElementById('showEvidenceToggle');
         if (showEvidenceToggle) {
-            showEvidenceToggle.addEventListener('change', (e) => {
+            showEvidenceToggle.addEventListener('change', async (e) => {
                 this.settings.showEvidence = e.target.checked;
+                try {
+                    await chrome.storage.sync.set({ showEvidence: this.settings.showEvidence });
+                } catch (error) {
+                    console.error('[StackScope Settings] Failed to save showEvidence:', error);
+                }
             });
         }
 
         const confidenceThreshold = document.getElementById('confidenceThreshold');
         if (confidenceThreshold) {
-            confidenceThreshold.addEventListener('change', (e) => {
+            confidenceThreshold.addEventListener('change', async (e) => {
                 this.settings.confidenceThreshold = parseInt(e.target.value);
+                try {
+                    await chrome.storage.sync.set({ confidenceThreshold: this.settings.confidenceThreshold });
+                } catch (error) {
+                    console.error('[StackScope Settings] Failed to save confidenceThreshold:', error);
+                }
             });
         }
 

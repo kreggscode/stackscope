@@ -42,6 +42,25 @@ build/
 # Chrome Extension Development
 *.pem
 *.crx
+*.zip
+
+# Build Scripts (temporary)
+build_fixed.bat
+build.ps1
+
+# Temporary Build Directories
+temp_build/
+temp_build_*/
+
+# Windows Executables (if any)
+*.exe
+*.msi
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Backup Files
 *.bak
