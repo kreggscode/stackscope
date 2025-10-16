@@ -2,6 +2,8 @@
 
 <div align="center">
 
+[![🌐 Visit Our Website](https://img.shields.io/badge/🌐_Visit_Website-kreggscode.github.io/stackscope-4f46e5?style=for-the-badge&logo=web&logoColor=white)](https://kreggscode.github.io/stackscope)
+
 ![StackScope Logo](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/1.png)
 
 **Discover the complete tech stack behind any website instantly**
