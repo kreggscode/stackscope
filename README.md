@@ -2,16 +2,20 @@
 
 <div align="center">
 
-[![🌐 Visit Our Website](https://img.shields.io/badge/🌐_Visit_Website-kreggscode.github.io/stackscope-4f46e5?style=for-the-badge&logo=web&logoColor=white)](https://kreggscode.github.io/stackscope)
-
-![StackScope Logo](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/1.png)
-
 **Discover the complete tech stack behind any website instantly**
 
 [![Chrome Web Store](https://img.shields.io/badge/Get%20on-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chrome.google.com/webstore)
 [![Website](https://img.shields.io/badge/Website-stackscope.app-4f46e5?style=for-the-badge&logo=web&logoColor=white)](https://kreggscode.github.io/stackscope)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/kreggscode/stackscope)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+---
+
+## 🚀 Now with 2,390+ Technologies!
+
+[![🌐 Visit Our Website](https://img.shields.io/badge/🌐_Visit_Website-kreggscode.github.io/stackscope-4f46e5?style=for-the-badge&logo=web&logoColor=white)](https://kreggscode.github.io/stackscope)
+
+![StackScope Logo](https://raw.githubusercontent.com/kreggscode/stackscope/main/Screenshots/1.png)
 
 *Detect 2,390+ web technologies across 100+ categories*
 
