@@ -4,7 +4,7 @@
 
 **Discover the complete tech stack behind any website instantly**
 
-[![Chrome Web Store](https://img.shields.io/badge/Get%20on-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chrome.google.com/webstore)
+[![Chrome Web Store](https://img.shields.io/badge/Get%20on-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/stackscope/glfmhombodmdahjgjobidkdibfoepdpj?authuser=0&hl=en)
 [![Website](https://img.shields.io/badge/Website-stackscope.app-4f46e5?style=for-the-badge&logo=web&logoColor=white)](https://kreggscode.github.io/stackscope)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/kreggscode/stackscope)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
@@ -83,7 +83,7 @@ StackScope identifies technologies across all major categories:
 ## 🚀 Installation
 
 ### From Chrome Web Store *(Coming Soon)*
-[![Get StackScope](https://img.shields.io/badge/Get%20StackScope-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome)](https://chrome.google.com/webstore)
+[![Get StackScope](https://img.shields.io/badge/Get%20StackScope-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/stackscope/glfmhombodmdahjgjobidkdibfoepdpj?authuser=0&hl=en)
 
 **Recommended for regular users** - One-click installation with automatic updates.
 
